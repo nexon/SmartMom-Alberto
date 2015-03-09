@@ -14,6 +14,14 @@
 		D364B6841AADFA9B00B06703 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D364B6831AADFA9B00B06703 /* Images.xcassets */; };
 		D364B6871AADFA9B00B06703 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D364B6851AADFA9B00B06703 /* LaunchScreen.xib */; };
 		D364B6931AADFA9B00B06703 /* SmartMom_AlbertoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D364B6921AADFA9B00B06703 /* SmartMom_AlbertoTests.m */; };
+		D364B6A31AADFD0300B06703 /* SMAInviteTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D364B6A21AADFD0300B06703 /* SMAInviteTableCell.m */; };
+		D364B6A61AADFD9100B06703 /* SMAContact.m in Sources */ = {isa = PBXBuildFile; fileRef = D364B6A51AADFD9100B06703 /* SMAContact.m */; };
+		D364B6AB1AADFDC100B06703 /* SMAAddressBookManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D364B6AA1AADFDC100B06703 /* SMAAddressBookManager.m */; };
+		D364B6AD1AAE38F400B06703 /* SMAContactTest.m in Sources */ = {isa = PBXBuildFile; fileRef = D364B6AC1AAE38F400B06703 /* SMAContactTest.m */; };
+		D372A8011AAE4401000C2E7B /* SMAAddressBookManagerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = D372A8001AAE4401000C2E7B /* SMAAddressBookManagerTest.m */; };
+		D372A8041AAE460C000C2E7B /* SMAButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D372A8031AAE460C000C2E7B /* SMAButton.m */; };
+		D372A8081AAE4858000C2E7B /* UIImage+ColorFromImage.m in Sources */ = {isa = PBXBuildFile; fileRef = D372A8071AAE4858000C2E7B /* UIImage+ColorFromImage.m */; };
+		D372A80B1AAE4D31000C2E7B /* SMAGrantAccessView.m in Sources */ = {isa = PBXBuildFile; fileRef = D372A80A1AAE4D31000C2E7B /* SMAGrantAccessView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +48,20 @@
 		D364B68C1AADFA9B00B06703 /* SmartMom-AlbertoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SmartMom-AlbertoTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D364B6911AADFA9B00B06703 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D364B6921AADFA9B00B06703 /* SmartMom_AlbertoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SmartMom_AlbertoTests.m; sourceTree = "<group>"; };
+		D364B6A11AADFD0300B06703 /* SMAInviteTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SMAInviteTableCell.h; path = Cells/SMAInviteTableCell.h; sourceTree = "<group>"; };
+		D364B6A21AADFD0300B06703 /* SMAInviteTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SMAInviteTableCell.m; path = Cells/SMAInviteTableCell.m; sourceTree = "<group>"; };
+		D364B6A41AADFD9100B06703 /* SMAContact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SMAContact.h; path = Models/SMAContact.h; sourceTree = "<group>"; };
+		D364B6A51AADFD9100B06703 /* SMAContact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SMAContact.m; path = Models/SMAContact.m; sourceTree = "<group>"; };
+		D364B6A91AADFDC100B06703 /* SMAAddressBookManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SMAAddressBookManager.h; path = Utils/SMAAddressBookManager.h; sourceTree = "<group>"; };
+		D364B6AA1AADFDC100B06703 /* SMAAddressBookManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SMAAddressBookManager.m; path = Utils/SMAAddressBookManager.m; sourceTree = "<group>"; };
+		D364B6AC1AAE38F400B06703 /* SMAContactTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SMAContactTest.m; path = "SmartMom-Alberto/Tests/SMAContactTest.m"; sourceTree = "<group>"; };
+		D372A8001AAE4401000C2E7B /* SMAAddressBookManagerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SMAAddressBookManagerTest.m; path = "SmartMom-Alberto/Tests/SMAAddressBookManagerTest.m"; sourceTree = "<group>"; };
+		D372A8021AAE460C000C2E7B /* SMAButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SMAButton.h; path = Buttons/SMAButton.h; sourceTree = "<group>"; };
+		D372A8031AAE460C000C2E7B /* SMAButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SMAButton.m; path = Buttons/SMAButton.m; sourceTree = "<group>"; };
+		D372A8061AAE4858000C2E7B /* UIImage+ColorFromImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+ColorFromImage.h"; path = "Categories/UIImage+ColorFromImage.h"; sourceTree = "<group>"; };
+		D372A8071AAE4858000C2E7B /* UIImage+ColorFromImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+ColorFromImage.m"; path = "Categories/UIImage+ColorFromImage.m"; sourceTree = "<group>"; };
+		D372A8091AAE4D31000C2E7B /* SMAGrantAccessView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SMAGrantAccessView.h; path = Views/SMAGrantAccessView.h; sourceTree = "<group>"; };
+		D372A80A1AAE4D31000C2E7B /* SMAGrantAccessView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SMAGrantAccessView.m; path = Views/SMAGrantAccessView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +88,7 @@
 				D364B6751AADFA9B00B06703 /* SmartMom-Alberto */,
 				D364B68F1AADFA9B00B06703 /* SmartMom-AlbertoTests */,
 				D364B6741AADFA9B00B06703 /* Products */,
+				D364B6AE1AAE38FA00B06703 /* Tests */,
 			);
 			sourceTree = "<group>";
 		};
@@ -81,10 +104,15 @@
 		D364B6751AADFA9B00B06703 /* SmartMom-Alberto */ = {
 			isa = PBXGroup;
 			children = (
-				D364B67A1AADFA9B00B06703 /* AppDelegate.h */,
+				D372A80D1AAE4D46000C2E7B /* Categories */,
+				D372A80C1AAE4D3B000C2E7B /* Custom Views */,
+				D364B6A81AADFDAA00B06703 /* Utils */,
+				D364B6A01AADFCD700B06703 /* Cell */,
+				D372A8051AAE4610000C2E7B /* Buttons */,
+				D364B69C1AADFC4D00B06703 /* Controllers */,
+				D364B6A71AADFD9500B06703 /* Models */,
 				D364B67B1AADFA9B00B06703 /* AppDelegate.m */,
-				D364B67D1AADFA9B00B06703 /* ViewController.h */,
-				D364B67E1AADFA9B00B06703 /* ViewController.m */,
+				D364B67A1AADFA9B00B06703 /* AppDelegate.h */,
 				D364B6801AADFA9B00B06703 /* Main.storyboard */,
 				D364B6831AADFA9B00B06703 /* Images.xcassets */,
 				D364B6851AADFA9B00B06703 /* LaunchScreen.xib */,
@@ -117,6 +145,78 @@
 				D364B6911AADFA9B00B06703 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D364B69C1AADFC4D00B06703 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D364B67D1AADFA9B00B06703 /* ViewController.h */,
+				D364B67E1AADFA9B00B06703 /* ViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		D364B6A01AADFCD700B06703 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				D364B6A11AADFD0300B06703 /* SMAInviteTableCell.h */,
+				D364B6A21AADFD0300B06703 /* SMAInviteTableCell.m */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
+		D364B6A71AADFD9500B06703 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D364B6A41AADFD9100B06703 /* SMAContact.h */,
+				D364B6A51AADFD9100B06703 /* SMAContact.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		D364B6A81AADFDAA00B06703 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				D364B6A91AADFDC100B06703 /* SMAAddressBookManager.h */,
+				D364B6AA1AADFDC100B06703 /* SMAAddressBookManager.m */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		D364B6AE1AAE38FA00B06703 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				D364B6AC1AAE38F400B06703 /* SMAContactTest.m */,
+				D372A8001AAE4401000C2E7B /* SMAAddressBookManagerTest.m */,
+			);
+			name = Tests;
+			sourceTree = "<group>";
+		};
+		D372A8051AAE4610000C2E7B /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				D372A8021AAE460C000C2E7B /* SMAButton.h */,
+				D372A8031AAE460C000C2E7B /* SMAButton.m */,
+			);
+			name = Buttons;
+			sourceTree = "<group>";
+		};
+		D372A80C1AAE4D3B000C2E7B /* Custom Views */ = {
+			isa = PBXGroup;
+			children = (
+				D372A8091AAE4D31000C2E7B /* SMAGrantAccessView.h */,
+				D372A80A1AAE4D31000C2E7B /* SMAGrantAccessView.m */,
+			);
+			name = "Custom Views";
+			sourceTree = "<group>";
+		};
+		D372A80D1AAE4D46000C2E7B /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				D372A8061AAE4858000C2E7B /* UIImage+ColorFromImage.h */,
+				D372A8071AAE4858000C2E7B /* UIImage+ColorFromImage.m */,
+			);
+			name = Categories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,9 +319,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D372A8041AAE460C000C2E7B /* SMAButton.m in Sources */,
 				D364B67F1AADFA9B00B06703 /* ViewController.m in Sources */,
 				D364B67C1AADFA9B00B06703 /* AppDelegate.m in Sources */,
+				D364B6A31AADFD0300B06703 /* SMAInviteTableCell.m in Sources */,
+				D372A80B1AAE4D31000C2E7B /* SMAGrantAccessView.m in Sources */,
+				D364B6A61AADFD9100B06703 /* SMAContact.m in Sources */,
+				D364B6AB1AADFDC100B06703 /* SMAAddressBookManager.m in Sources */,
 				D364B6791AADFA9B00B06703 /* main.m in Sources */,
+				D372A8081AAE4858000C2E7B /* UIImage+ColorFromImage.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -229,6 +335,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D372A8011AAE4401000C2E7B /* SMAAddressBookManagerTest.m in Sources */,
+				D364B6AD1AAE38F400B06703 /* SMAContactTest.m in Sources */,
 				D364B6931AADFA9B00B06703 /* SmartMom_AlbertoTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -412,6 +520,7 @@
 				D364B6981AADFA9B00B06703 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D364B6991AADFA9B00B06703 /* Build configuration list for PBXNativeTarget "SmartMom-AlbertoTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +529,7 @@
 				D364B69B1AADFA9B00B06703 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
