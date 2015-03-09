@@ -9,7 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "SMAAddressBookManager.h"
 #import "SMAContact.h"
-#import "SMAButton.h"
 #import "SMAGrantAccessView.h"
 
 #import "UIImage+ColorFromImage.h"

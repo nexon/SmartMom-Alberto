@@ -19,7 +19,6 @@
 		D364B6AB1AADFDC100B06703 /* SMAAddressBookManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D364B6AA1AADFDC100B06703 /* SMAAddressBookManager.m */; };
 		D364B6AD1AAE38F400B06703 /* SMAContactTest.m in Sources */ = {isa = PBXBuildFile; fileRef = D364B6AC1AAE38F400B06703 /* SMAContactTest.m */; };
 		D372A8011AAE4401000C2E7B /* SMAAddressBookManagerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = D372A8001AAE4401000C2E7B /* SMAAddressBookManagerTest.m */; };
-		D372A8041AAE460C000C2E7B /* SMAButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D372A8031AAE460C000C2E7B /* SMAButton.m */; };
 		D372A8081AAE4858000C2E7B /* UIImage+ColorFromImage.m in Sources */ = {isa = PBXBuildFile; fileRef = D372A8071AAE4858000C2E7B /* UIImage+ColorFromImage.m */; };
 		D372A80B1AAE4D31000C2E7B /* SMAGrantAccessView.m in Sources */ = {isa = PBXBuildFile; fileRef = D372A80A1AAE4D31000C2E7B /* SMAGrantAccessView.m */; };
 /* End PBXBuildFile section */
@@ -56,8 +55,6 @@
 		D364B6AA1AADFDC100B06703 /* SMAAddressBookManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SMAAddressBookManager.m; path = Utils/SMAAddressBookManager.m; sourceTree = "<group>"; };
 		D364B6AC1AAE38F400B06703 /* SMAContactTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SMAContactTest.m; path = "SmartMom-Alberto/Tests/SMAContactTest.m"; sourceTree = "<group>"; };
 		D372A8001AAE4401000C2E7B /* SMAAddressBookManagerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SMAAddressBookManagerTest.m; path = "SmartMom-Alberto/Tests/SMAAddressBookManagerTest.m"; sourceTree = "<group>"; };
-		D372A8021AAE460C000C2E7B /* SMAButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SMAButton.h; path = Buttons/SMAButton.h; sourceTree = "<group>"; };
-		D372A8031AAE460C000C2E7B /* SMAButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SMAButton.m; path = Buttons/SMAButton.m; sourceTree = "<group>"; };
 		D372A8061AAE4858000C2E7B /* UIImage+ColorFromImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+ColorFromImage.h"; path = "Categories/UIImage+ColorFromImage.h"; sourceTree = "<group>"; };
 		D372A8071AAE4858000C2E7B /* UIImage+ColorFromImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+ColorFromImage.m"; path = "Categories/UIImage+ColorFromImage.m"; sourceTree = "<group>"; };
 		D372A8091AAE4D31000C2E7B /* SMAGrantAccessView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SMAGrantAccessView.h; path = Views/SMAGrantAccessView.h; sourceTree = "<group>"; };
@@ -108,7 +105,6 @@
 				D372A80C1AAE4D3B000C2E7B /* Custom Views */,
 				D364B6A81AADFDAA00B06703 /* Utils */,
 				D364B6A01AADFCD700B06703 /* Cell */,
-				D372A8051AAE4610000C2E7B /* Buttons */,
 				D364B69C1AADFC4D00B06703 /* Controllers */,
 				D364B6A71AADFD9500B06703 /* Models */,
 				D364B67B1AADFA9B00B06703 /* AppDelegate.m */,
@@ -190,15 +186,6 @@
 				D372A8001AAE4401000C2E7B /* SMAAddressBookManagerTest.m */,
 			);
 			name = Tests;
-			sourceTree = "<group>";
-		};
-		D372A8051AAE4610000C2E7B /* Buttons */ = {
-			isa = PBXGroup;
-			children = (
-				D372A8021AAE460C000C2E7B /* SMAButton.h */,
-				D372A8031AAE460C000C2E7B /* SMAButton.m */,
-			);
-			name = Buttons;
 			sourceTree = "<group>";
 		};
 		D372A80C1AAE4D3B000C2E7B /* Custom Views */ = {
@@ -319,7 +306,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D372A8041AAE460C000C2E7B /* SMAButton.m in Sources */,
 				D364B67F1AADFA9B00B06703 /* ViewController.m in Sources */,
 				D364B67C1AADFA9B00B06703 /* AppDelegate.m in Sources */,
 				D364B6A31AADFD0300B06703 /* SMAInviteTableCell.m in Sources */,

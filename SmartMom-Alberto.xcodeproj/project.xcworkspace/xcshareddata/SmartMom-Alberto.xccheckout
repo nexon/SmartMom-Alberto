@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>8C593030-A521-4EDD-A20D-46CD022767BD</string>
+	<key>IDESourceControlProjectName</key>
+	<string>SmartMom-Alberto</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>0BA4827889E96F6439B6AE95A1A83FD56C13EC7A</key>
+		<string>github.com:nexon/SmartMom-Alberto.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>SmartMom-Alberto.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>0BA4827889E96F6439B6AE95A1A83FD56C13EC7A</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:nexon/SmartMom-Alberto.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>0BA4827889E96F6439B6AE95A1A83FD56C13EC7A</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>0BA4827889E96F6439B6AE95A1A83FD56C13EC7A</string>
+			<key>IDESourceControlWCCName</key>
+			<string>SmartMom-Alberto</string>
+		</dict>
+	</array>
+</dict>
+</plist>
