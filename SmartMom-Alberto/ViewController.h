@@ -7,9 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SMAAddressBookManager.h"
+#import "SMAContact.h"
+#import "SMAButton.h"
+#import "SMAGrantAccessView.h"
 
-@interface ViewController : UIViewController
+#import "UIImage+ColorFromImage.h"
 
-
+@interface ViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+@property (strong, nonatomic) IBOutlet UITableView        *tableView;
+@property (strong, nonatomic) NSArray                     *addressBook;
 @end
 
