@@ -10,4 +10,15 @@
 
 @implementation SMAOtherMom
 
++ (instancetype)momWithName:(NSString *)aName location:(NSString *)aLocation andImage:(UIImage *)aImage
+{
+    SMAOtherMom *newOtherMom = [[[self class] alloc] init];
+    
+    newOtherMom.name     = aName;
+    newOtherMom.location = aLocation;
+    newOtherMom.image    = aImage;
+    
+    return newOtherMom;
+}
+
 @end
