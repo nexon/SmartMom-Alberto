@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "UIImage+ColorFromImage.h"
 
 @interface SMAButton : UIButton
 
