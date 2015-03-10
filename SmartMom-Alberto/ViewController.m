@@ -246,11 +246,12 @@ static NSString *SMAFollowCell  = @"SMAFollowCell";
                 self.sendInvitationButton.hidden = NO;
             }
         } else {
+            [self.invitationArray removeObject:self.addressBook[button.tag]];
             if(self.invitationArray.count == 0) {
                 self.verticalSpaceTableViewContraint.constant = 0;
                 self.sendInvitationButton.hidden = YES;
             }
-            [self.invitationArray removeObject:self.addressBook[button.tag]];
+            
         }
         
         NSString *textButton = [NSString stringWithFormat:@"Send %li Invitations", self.invitationArray.count];
