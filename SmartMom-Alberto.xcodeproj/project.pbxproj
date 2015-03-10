@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C6233F0B20D6AECC80738D96 /* libPods-SmartMom-AlbertoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B269624D870EDFC111DE201B /* libPods-SmartMom-AlbertoTests.a */; };
+		D3505C391AAF2B7D00DFEF24 /* SMAOtherMom.m in Sources */ = {isa = PBXBuildFile; fileRef = D3505C381AAF2B7D00DFEF24 /* SMAOtherMom.m */; };
+		D3505C3F1AAF410A00DFEF24 /* SMAButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D3505C3E1AAF410A00DFEF24 /* SMAButton.m */; };
+		D3505C461AAF777200DFEF24 /* NSString+ValidEmail.m in Sources */ = {isa = PBXBuildFile; fileRef = D3505C451AAF777200DFEF24 /* NSString+ValidEmail.m */; };
 		D364B6791AADFA9B00B06703 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D364B6781AADFA9B00B06703 /* main.m */; };
 		D364B67C1AADFA9B00B06703 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D364B67B1AADFA9B00B06703 /* AppDelegate.m */; };
 		D364B67F1AADFA9B00B06703 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D364B67E1AADFA9B00B06703 /* ViewController.m */; };
@@ -14,7 +18,6 @@
 		D364B6841AADFA9B00B06703 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D364B6831AADFA9B00B06703 /* Images.xcassets */; };
 		D364B6871AADFA9B00B06703 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D364B6851AADFA9B00B06703 /* LaunchScreen.xib */; };
 		D364B6931AADFA9B00B06703 /* SmartMom_AlbertoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D364B6921AADFA9B00B06703 /* SmartMom_AlbertoTests.m */; };
-		D364B6A31AADFD0300B06703 /* SMAInviteTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D364B6A21AADFD0300B06703 /* SMAInviteTableCell.m */; };
 		D364B6A61AADFD9100B06703 /* SMAContact.m in Sources */ = {isa = PBXBuildFile; fileRef = D364B6A51AADFD9100B06703 /* SMAContact.m */; };
 		D364B6AB1AADFDC100B06703 /* SMAAddressBookManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D364B6AA1AADFDC100B06703 /* SMAAddressBookManager.m */; };
 		D364B6AD1AAE38F400B06703 /* SMAContactTest.m in Sources */ = {isa = PBXBuildFile; fileRef = D364B6AC1AAE38F400B06703 /* SMAContactTest.m */; };
@@ -34,6 +37,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		44EB98B24263E3C8ABBA0356 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		5DA18BCAAA074E971E23A918 /* Pods-SmartMom-AlbertoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartMom-AlbertoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SmartMom-AlbertoTests/Pods-SmartMom-AlbertoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		61E9EED2A1F583CB8E67FD6A /* Pods-SmartMom-AlbertoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartMom-AlbertoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SmartMom-AlbertoTests/Pods-SmartMom-AlbertoTests.release.xcconfig"; sourceTree = "<group>"; };
+		64714DE6E4EB20C90CD29120 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		93D2699A4C14C08C40CB5F26 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		B269624D870EDFC111DE201B /* libPods-SmartMom-AlbertoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SmartMom-AlbertoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B41EDA328E7266A88B2F4C8E /* libPods-SmartMom-Alberto.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SmartMom-Alberto.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D3505C371AAF2B7D00DFEF24 /* SMAOtherMom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SMAOtherMom.h; path = Models/SMAOtherMom.h; sourceTree = "<group>"; };
+		D3505C381AAF2B7D00DFEF24 /* SMAOtherMom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SMAOtherMom.m; path = Models/SMAOtherMom.m; sourceTree = "<group>"; };
+		D3505C3D1AAF410A00DFEF24 /* SMAButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SMAButton.h; path = Buttons/SMAButton.h; sourceTree = "<group>"; };
+		D3505C3E1AAF410A00DFEF24 /* SMAButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SMAButton.m; path = Buttons/SMAButton.m; sourceTree = "<group>"; };
+		D3505C441AAF777200DFEF24 /* NSString+ValidEmail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+ValidEmail.h"; path = "Categories/NSString+ValidEmail.h"; sourceTree = "<group>"; };
+		D3505C451AAF777200DFEF24 /* NSString+ValidEmail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+ValidEmail.m"; path = "Categories/NSString+ValidEmail.m"; sourceTree = "<group>"; };
 		D364B6731AADFA9B00B06703 /* SmartMom-Alberto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SmartMom-Alberto.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D364B6771AADFA9B00B06703 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D364B6781AADFA9B00B06703 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -47,8 +63,6 @@
 		D364B68C1AADFA9B00B06703 /* SmartMom-AlbertoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SmartMom-AlbertoTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D364B6911AADFA9B00B06703 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D364B6921AADFA9B00B06703 /* SmartMom_AlbertoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SmartMom_AlbertoTests.m; sourceTree = "<group>"; };
-		D364B6A11AADFD0300B06703 /* SMAInviteTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SMAInviteTableCell.h; path = Cells/SMAInviteTableCell.h; sourceTree = "<group>"; };
-		D364B6A21AADFD0300B06703 /* SMAInviteTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SMAInviteTableCell.m; path = Cells/SMAInviteTableCell.m; sourceTree = "<group>"; };
 		D364B6A41AADFD9100B06703 /* SMAContact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SMAContact.h; path = Models/SMAContact.h; sourceTree = "<group>"; };
 		D364B6A51AADFD9100B06703 /* SMAContact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SMAContact.m; path = Models/SMAContact.m; sourceTree = "<group>"; };
 		D364B6A91AADFDC100B06703 /* SMAAddressBookManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SMAAddressBookManager.h; path = Utils/SMAAddressBookManager.h; sourceTree = "<group>"; };
@@ -73,12 +87,43 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6233F0B20D6AECC80738D96 /* libPods-SmartMom-AlbertoTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1341493F91600B9F2FE27722 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				64714DE6E4EB20C90CD29120 /* Pods.debug.xcconfig */,
+				44EB98B24263E3C8ABBA0356 /* Pods.release.xcconfig */,
+				5DA18BCAAA074E971E23A918 /* Pods-SmartMom-AlbertoTests.debug.xcconfig */,
+				61E9EED2A1F583CB8E67FD6A /* Pods-SmartMom-AlbertoTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A7AFB45117D43CA236D412FE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				93D2699A4C14C08C40CB5F26 /* libPods.a */,
+				B269624D870EDFC111DE201B /* libPods-SmartMom-AlbertoTests.a */,
+				B41EDA328E7266A88B2F4C8E /* libPods-SmartMom-Alberto.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D3505C401AAF411400DFEF24 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				D3505C3E1AAF410A00DFEF24 /* SMAButton.m */,
+				D3505C3D1AAF410A00DFEF24 /* SMAButton.h */,
+			);
+			name = Buttons;
+			sourceTree = "<group>";
+		};
 		D364B66A1AADFA9B00B06703 = {
 			isa = PBXGroup;
 			children = (
@@ -86,6 +131,8 @@
 				D364B68F1AADFA9B00B06703 /* SmartMom-AlbertoTests */,
 				D364B6741AADFA9B00B06703 /* Products */,
 				D364B6AE1AAE38FA00B06703 /* Tests */,
+				1341493F91600B9F2FE27722 /* Pods */,
+				A7AFB45117D43CA236D412FE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,10 +148,10 @@
 		D364B6751AADFA9B00B06703 /* SmartMom-Alberto */ = {
 			isa = PBXGroup;
 			children = (
+				D3505C401AAF411400DFEF24 /* Buttons */,
 				D372A80D1AAE4D46000C2E7B /* Categories */,
 				D372A80C1AAE4D3B000C2E7B /* Custom Views */,
 				D364B6A81AADFDAA00B06703 /* Utils */,
-				D364B6A01AADFCD700B06703 /* Cell */,
 				D364B69C1AADFC4D00B06703 /* Controllers */,
 				D364B6A71AADFD9500B06703 /* Models */,
 				D364B67B1AADFA9B00B06703 /* AppDelegate.m */,
@@ -152,20 +199,13 @@
 			name = Controllers;
 			sourceTree = "<group>";
 		};
-		D364B6A01AADFCD700B06703 /* Cell */ = {
-			isa = PBXGroup;
-			children = (
-				D364B6A11AADFD0300B06703 /* SMAInviteTableCell.h */,
-				D364B6A21AADFD0300B06703 /* SMAInviteTableCell.m */,
-			);
-			name = Cell;
-			sourceTree = "<group>";
-		};
 		D364B6A71AADFD9500B06703 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				D364B6A41AADFD9100B06703 /* SMAContact.h */,
 				D364B6A51AADFD9100B06703 /* SMAContact.m */,
+				D3505C371AAF2B7D00DFEF24 /* SMAOtherMom.h */,
+				D3505C381AAF2B7D00DFEF24 /* SMAOtherMom.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -202,6 +242,8 @@
 			children = (
 				D372A8061AAE4858000C2E7B /* UIImage+ColorFromImage.h */,
 				D372A8071AAE4858000C2E7B /* UIImage+ColorFromImage.m */,
+				D3505C441AAF777200DFEF24 /* NSString+ValidEmail.h */,
+				D3505C451AAF777200DFEF24 /* NSString+ValidEmail.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -230,9 +272,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D364B6991AADFA9B00B06703 /* Build configuration list for PBXNativeTarget "SmartMom-AlbertoTests" */;
 			buildPhases = (
+				3C53426A6AB9DDB5BFE1A105 /* Check Pods Manifest.lock */,
 				D364B6881AADFA9B00B06703 /* Sources */,
 				D364B6891AADFA9B00B06703 /* Frameworks */,
 				D364B68A1AADFA9B00B06703 /* Resources */,
+				5F8FDBACC7236050D5834CFF /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -301,19 +345,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3C53426A6AB9DDB5BFE1A105 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		5F8FDBACC7236050D5834CFF /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SmartMom-AlbertoTests/Pods-SmartMom-AlbertoTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D364B66F1AADFA9B00B06703 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				D364B67F1AADFA9B00B06703 /* ViewController.m in Sources */,
+				D3505C461AAF777200DFEF24 /* NSString+ValidEmail.m in Sources */,
 				D364B67C1AADFA9B00B06703 /* AppDelegate.m in Sources */,
-				D364B6A31AADFD0300B06703 /* SMAInviteTableCell.m in Sources */,
 				D372A80B1AAE4D31000C2E7B /* SMAGrantAccessView.m in Sources */,
 				D364B6A61AADFD9100B06703 /* SMAContact.m in Sources */,
 				D364B6AB1AADFDC100B06703 /* SMAAddressBookManager.m in Sources */,
 				D364B6791AADFA9B00B06703 /* main.m in Sources */,
+				D3505C3F1AAF410A00DFEF24 /* SMAButton.m in Sources */,
 				D372A8081AAE4858000C2E7B /* UIImage+ColorFromImage.m in Sources */,
+				D3505C391AAF2B7D00DFEF24 /* SMAOtherMom.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -455,6 +534,7 @@
 		};
 		D364B69A1AADFA9B00B06703 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5DA18BCAAA074E971E23A918 /* Pods-SmartMom-AlbertoTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -474,6 +554,7 @@
 		};
 		D364B69B1AADFA9B00B06703 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 61E9EED2A1F583CB8E67FD6A /* Pods-SmartMom-AlbertoTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (

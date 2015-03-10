@@ -7,13 +7,22 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MessageUI/MessageUI.h>
+#import <MessageUI/MFMailComposeViewController.h>
 #import "SMAAddressBookManager.h"
 #import "SMAContact.h"
+#import "SMAOtherMom.h"
+#import "SMAButton.h"
 #import "SMAGrantAccessView.h"
 
 #import "UIImage+ColorFromImage.h"
 
-@interface ViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+typedef NS_ENUM(NSInteger, SMASegment) {
+    SMASegmentInviteContacts,
+    SMASegmentFollowMom
+};
+
+@interface ViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate, MFMailComposeViewControllerDelegate>
 @property (strong, nonatomic) IBOutlet UITableView        *tableView;
 @property (strong, nonatomic) NSArray                     *addressBook;
 
