@@ -206,7 +206,8 @@ static NSString *SMAFollowCell  = @"SMAFollowCell";
         [followButton addTarget:self
                          action:@selector(followButtonDidPress:)
                forControlEvents:UIControlEventTouchUpInside];
-        followButton.selected  = [self.filterArray containsObject:mom];
+        followButton.tag  = indexPath.row;
+        followButton.selected  = mom.isFollowedByMe;
         
         [containerButton addSubview:hideButton];
         [containerButton addSubview:followButton];
@@ -292,6 +293,18 @@ static NSString *SMAFollowCell  = @"SMAFollowCell";
 {
     UIButton *button = (UIButton *)sender;
     button.selected  = !button.selected;
+    SMAOtherMom *mom;
+    
+    if(self.searchDisplayController.active) {
+        mom = self.filterArray[button.tag];
+    } else {
+        mom = self.followMoms[button.tag];
+        
+    }
+
+    mom.following = button.selected;
+    
+    [self.tableView reloadData];
     
 }
 

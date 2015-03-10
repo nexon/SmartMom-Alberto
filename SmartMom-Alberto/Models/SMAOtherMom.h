@@ -13,6 +13,7 @@
 @property (strong, nonatomic) NSString *name;
 @property (strong, nonatomic) NSString *location;
 @property (strong, nonatomic) UIImage  *image;
+@property (nonatomic, getter=isFollowedByMe) BOOL following;
 
 
 + (instancetype)momWithName:(NSString *)aName location:(NSString *)aLocation andImage:(UIImage *)aImage;

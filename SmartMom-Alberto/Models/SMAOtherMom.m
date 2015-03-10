@@ -14,10 +14,10 @@
 {
     SMAOtherMom *newOtherMom = [[[self class] alloc] init];
     
-    newOtherMom.name     = aName;
-    newOtherMom.location = aLocation;
-    newOtherMom.image    = aImage;
-    
+    newOtherMom.name      = aName;
+    newOtherMom.location  = aLocation;
+    newOtherMom.image     = aImage;
+    newOtherMom.following = NO;
     return newOtherMom;
 }
 
