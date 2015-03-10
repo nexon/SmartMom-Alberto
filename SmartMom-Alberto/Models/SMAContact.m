@@ -10,30 +10,52 @@
 
 @implementation SMAContact
 
-+ (instancetype)contactFor:(ABRecordRef)record
++ (NSArray *)allContactFor:(ABRecordRef)record
 {
+    NSMutableArray *allContacts = [NSMutableArray array];
     NSDictionary *properties = [self dictionaryRepresentationForABPerson:record];
-    NSArray *phone          = [self getPropertyFrom:ABRecordCopyValue(record, kABPersonPhoneProperty)];
-    NSArray *mail           = [self getPropertyFrom:ABRecordCopyValue(record, kABPersonEmailProperty)];
+    NSArray *phones          = [self getPropertyFrom:ABRecordCopyValue(record, kABPersonPhoneProperty)];
+    NSArray *mails           = [self getPropertyFrom:ABRecordCopyValue(record, kABPersonEmailProperty)];
+
+    for (NSString *phone in phones) {
+        SMAContact *newContact = [[SMAContact alloc] init];
+        newContact.firstName = properties[@"First"];
+        newContact.lastName  = properties[@"Last"];
+        newContact.phoneNumber = phone;
+        
+        [allContacts addObject:newContact];
+        
+    }
     
-    SMAContact *newContact = [[SMAContact alloc] init];
-    newContact.firstName = properties[@"First"];
-    newContact.lastName  = properties[@"Last"];
-    newContact.phoneNumbers = phone;
-    newContact.emails = mail;
+    for (NSString *mail in mails) {
+        if([mail isValidEmail]) {
+            SMAContact *newContact = [[SMAContact alloc] init];
+            newContact.firstName = properties[@"First"];
+            newContact.lastName  = properties[@"Last"];
+            newContact.email     = mail;
+            
+            [allContacts addObject:newContact];
+        }
+    }
     
-    return newContact;
+   
+    
+    
+    return allContacts;
 }
 
 + (NSArray *)contactsFor:(NSArray *)aContacts
 {
     NSMutableArray *array = [NSMutableArray array];
     for (id record in aContacts) {
-        SMAContact *contact = [SMAContact contactFor:(ABRecordRef)record];
-        if([contact type] != SMAContactTypeNone)
-            [array addObject:contact];
+        NSArray *allContacts = [SMAContact allContactFor:(ABRecordRef)record];
+        
+        for (SMAContact *contact in allContacts) {
+            if([contact type] != SMAContactTypeNone) {
+                [array addObject:contact];
+            }
+        }
     }
-    
     return array;
 }
 
@@ -71,16 +93,12 @@
 
 - (SMAContactType)type
 {
-    if(self.phoneNumbers.count > 0 && self.emails.count > 0) {
-       return SMAContactTypeBoth;
+    if(self.email) {
+        return SMAContactTypeMail;
+    } else if(self.phoneNumber) {
+        return SMAContactTypePhone;
     } else {
-        if(self.emails.count > 0) {
-            return SMAContactTypeMail;
-        } else if(self.phoneNumbers.count > 0) {
-            return SMAContactTypePhone;
-        } else {
-            return SMAContactTypeNone;
-        }
+        return SMAContactTypeNone;
     }
 }
 

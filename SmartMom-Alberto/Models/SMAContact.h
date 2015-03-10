@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <AddressBook/ABPerson.h>
 #import <AddressBook/ABMultiValue.h>
-
+#import "NSString+ValidEmail.h"
 
 typedef NS_ENUM(NSInteger, SMAContactType) {
     SMAContactTypeMail,
@@ -20,14 +20,13 @@ typedef NS_ENUM(NSInteger, SMAContactType) {
 
 @interface SMAContact : NSObject
 
-+ (instancetype)contactFor:(ABRecordRef)record;
 + (NSArray *)contactsFor:(NSArray *)aContacts;
 - (NSString *)fullName;
 - (SMAContactType)type;
 
 @property (strong, nonatomic) NSString *firstName;
 @property (strong, nonatomic) NSString *lastName;
-@property (strong, nonatomic) NSArray  *phoneNumbers;
-@property (strong, nonatomic) NSArray  *emails;
+@property (strong, nonatomic) NSString *phoneNumber;
+@property (strong, nonatomic) NSString *email;
 
 @end
