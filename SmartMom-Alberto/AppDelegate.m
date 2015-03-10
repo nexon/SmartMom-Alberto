@@ -42,4 +42,21 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+-(void)applicationDidReceiveMemoryWarning:(UIApplication *)application
+{
+    NSString *messageText = @"The device is running low on memory, i will shutdown the app";
+    UIAlertView *alert    = [[UIAlertView alloc] initWithTitle:@"Low Memory"
+                                                       message:messageText
+                                                      delegate:self
+                                             cancelButtonTitle:@"Ok"
+                                             otherButtonTitles:nil];
+    [alert show];
+}
+
+#pragma mark - UIAlertViewDelegate
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    exit(0);
+}
 @end
