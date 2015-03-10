@@ -18,19 +18,7 @@
 
 - (IBAction)didPressAcceptButton:(id)sender
 {
-    SMAAddressBookManager *abManager = [[SMAAddressBookManager alloc] init];
-    
-    [abManager askForAuthorizationWithCompletionBlock:^(BOOL success, NSArray *contacts, NSError *error) {
-        if(success) {
-            self.contactsViewController.addressBook = [NSArray arrayWithArray:[SMAContact contactsFor:contacts]];
-            NSLog(@"%s: %@", __func__, self.contactsViewController);
-            [self.contactsViewController.tableView reloadData];
-            self.hidden = YES;
-        } else {
-            NSLog(@"%s: %@", __func__, error);
-        }
-    }];
-
+    [self.contactsViewController askForAuthorization];
 }
 /*
 // Only override drawRect: if you perform custom drawing.

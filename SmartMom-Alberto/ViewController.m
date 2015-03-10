@@ -11,18 +11,27 @@
 @interface ViewController ()
 @property (strong, nonatomic) SMAAddressBookManager       *abManager;
 @property (strong, nonatomic) NSMutableArray              *invitesArray;
-@property (weak, nonatomic)   IBOutlet NSLayoutConstraint *verticalSpaceTableViewContraint;
-@property (strong, nonatomic) IBOutlet SMAGrantAccessView *grantAccessInfo;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint   *verticalSpaceTableViewContraint;
+@property (weak, nonatomic) IBOutlet SMAGrantAccessView   *grantAccessView;
 @end
 
 @implementation ViewController
 
+- (instancetype)initWithCoder:(NSCoder *)aDecoder
+{
+    self = [super initWithCoder:aDecoder];
+    if(self) {
+        _abManager    = [[SMAAddressBookManager alloc] init];
+        _invitesArray = [NSMutableArray array];
+    }
+    
+    return self;
+    
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _abManager    = [[SMAAddressBookManager alloc] init];
-    _invitesArray = [NSMutableArray array];
-    self.grantAccessInfo.hidden = NO;
-    self.grantAccessInfo.contactsViewController = self;
+    self.grantAccessView.contactsViewController = self;
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -34,22 +43,29 @@
     }
     
     if(self.abManager.accessGranted) {
-        NSLog(@"%s: %@", __func__, self.grantAccessInfo);
-        self.grantAccessInfo.hidden = YES;
-        [self.abManager askForAuthorizationWithCompletionBlock:^(BOOL success, NSArray *contacts, NSError *error) {
-            if(success) {
-                self.addressBook = [NSArray arrayWithArray:[SMAContact contactsFor:contacts]];
-                [self.tableView reloadData];
-            } else {
-                NSLog(@"%s: %@", __func__, error);
-            }
-        }];
+        [self askForAuthorization];
     }
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+
+#pragma mark - Ask for Authorization 
+
+- (void)askForAuthorization
+{
+    [self.abManager askForAuthorizationWithCompletionBlock:^(BOOL success, NSArray *contacts, NSError *error) {
+        if(success) {
+            self.addressBook = [NSArray arrayWithArray:[SMAContact contactsFor:contacts]];
+            self.grantAccessView.hidden = YES;
+            [self.tableView reloadData];
+        } else {
+            NSLog(@"%s: %@", __func__, error);
+        }
+    }];
 }
 
 #pragma mark - UITableViewDelegate
