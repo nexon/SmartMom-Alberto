@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		880857877C47939213070024 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 93D2699A4C14C08C40CB5F26 /* libPods.a */; };
 		C6233F0B20D6AECC80738D96 /* libPods-SmartMom-AlbertoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B269624D870EDFC111DE201B /* libPods-SmartMom-AlbertoTests.a */; };
 		D330E6141AB0616200B59ADC /* ViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D330E6131AB0616200B59ADC /* ViewControllerTests.m */; };
 		D330E6171AB063F600B59ADC /* ViewController+Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = D330E6161AB063F600B59ADC /* ViewController+Tests.m */; };
@@ -85,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				880857877C47939213070024 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,9 +273,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D364B6961AADFA9B00B06703 /* Build configuration list for PBXNativeTarget "SmartMom-Alberto" */;
 			buildPhases = (
+				9107DC630AFAFCED598D56AA /* Check Pods Manifest.lock */,
 				D364B66F1AADFA9B00B06703 /* Sources */,
 				D364B6701AADFA9B00B06703 /* Frameworks */,
 				D364B6711AADFA9B00B06703 /* Resources */,
+				D1A8F557AF6FBCA05F201FC0 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -390,6 +394,36 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SmartMom-AlbertoTests/Pods-SmartMom-AlbertoTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9107DC630AFAFCED598D56AA /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D1A8F557AF6FBCA05F201FC0 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -532,6 +566,7 @@
 		};
 		D364B6971AADFA9B00B06703 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 64714DE6E4EB20C90CD29120 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "SmartMom-Alberto/Info.plist";
@@ -542,6 +577,7 @@
 		};
 		D364B6981AADFA9B00B06703 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 44EB98B24263E3C8ABBA0356 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "SmartMom-Alberto/Info.plist";
