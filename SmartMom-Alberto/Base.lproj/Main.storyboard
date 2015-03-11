@@ -27,7 +27,7 @@
         <!--Invite Friends-->
         <scene sceneID="cOz-Yv-cez">
             <objects>
-                <viewController id="ya1-SB-jgC" customClass="ViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="inviteFriends" id="ya1-SB-jgC" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="NK0-gU-8LS"/>
                         <viewControllerLayoutGuide type="bottom" id="XGu-wX-yT8"/>
@@ -192,6 +192,7 @@
                     <navigationItem key="navigationItem" title="Invite Friends" id="8mj-bI-j3i"/>
                     <connections>
                         <outlet property="grantAccessView" destination="7vq-72-Wbp" id="x0Y-v2-sU8"/>
+                        <outlet property="layoutSelectorView" destination="mtC-N8-ZW0" id="Krw-25-WOW"/>
                         <outlet property="searchDisplayController" destination="zzR-Gs-cqV" id="93R-p8-Tux"/>
                         <outlet property="sendInvitationButton" destination="m4L-Ej-uJv" id="aeW-RB-vpV"/>
                         <outlet property="tableView" destination="TJX-4x-rcB" id="2Fq-BM-yil"/>

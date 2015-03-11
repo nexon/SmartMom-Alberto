@@ -26,6 +26,8 @@ static NSString *SMAFollowCell  = @"SMAFollowCell";
 - (IBAction)sendInvitationButtonDidPress:(id)send;
 - (void)showSendInvitationButtonIfNeeded;
 - (void)invitationButtonDidPress:(id)sender;
+- (void)hideButtonDidPress:(id)sender;
+- (void)followButtonDidPress:(id)sender;
 - (void)setContentFor:(UITableViewCell *)cell inTableView:(UITableView*)tableView atIndexPath:(NSIndexPath *)indexPath;
 - (void)setUIContentFor:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath withObject:(id)object;
 - (NSMutableArray *)filterContentIn:(SMASegment)aSegment withText:(NSString *)aText;
