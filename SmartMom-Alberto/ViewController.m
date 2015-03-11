@@ -12,6 +12,7 @@ static NSString *SMAContactCell = @"SMAContactCell";
 static NSString *SMAFollowCell  = @"SMAFollowCell";
 
 @interface ViewController ()
+@property (weak, nonatomic) IBOutlet UISegmentedControl *layoutSelectorView;
 @property (weak, nonatomic) IBOutlet UIButton *sendInvitationButton;
 @property (strong, nonatomic) SMAAddressBookManager       *abManager;
 @property (strong, nonatomic) NSMutableArray              *invitationArray;
@@ -22,7 +23,12 @@ static NSString *SMAFollowCell  = @"SMAFollowCell";
 @property (nonatomic)           SMASegment                selectedSegment;
 
 - (IBAction)changeViewDidChange:(id)sender;
+- (IBAction)sendInvitationButtonDidPress:(id)send;
 - (void)showSendInvitationButtonIfNeeded;
+- (void)invitationButtonDidPress:(id)sender;
+- (void)setContentFor:(UITableViewCell *)cell inTableView:(UITableView*)tableView atIndexPath:(NSIndexPath *)indexPath;
+- (void)setUIContentFor:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath withObject:(id)object;
+- (NSMutableArray *)filterContentIn:(SMASegment)aSegment withText:(NSString *)aText;
 @end
 
 @implementation ViewController
@@ -233,13 +239,6 @@ static NSString *SMAFollowCell  = @"SMAFollowCell";
    
     if(contact.type == SMAContactTypeMail) {
         if(button.selected) {
-            SMAContact *contact;
-            if(self.searchDisplayController.active) {
-                contact = self.filterArray[button.tag];
-            } else {
-                contact = self.addressBook[button.tag];
-            }
-            
             [self.invitationArray addObject:contact];
             if(self.verticalSpaceTableViewContraint.constant == 0) {
                 self.verticalSpaceTableViewContraint.constant = 43;
