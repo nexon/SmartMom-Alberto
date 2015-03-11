@@ -27,11 +27,13 @@
 {
     int max = MAX_CONTACT;
     self.mockContacts = [NSMutableArray array];
+    NSArray *names = @[@"John", @"Laurel", @"Bass", @"Brad", @"Jose", @"Mike", @"Madonna", @"Courtney", @"Jack", @"Jack Bauer", @"Sif",
+                       @"Rand", @"Raphael", @"Jess", @"Emmett", @"Martin", @"Flav", @"Jack Bauer"];
     
     for (int i = 0; i<max; i++) {
         id mockContact = [OCMockObject mockForClass:[SMAContact class]];
         
-        NSString *fullName = [NSString stringWithFormat:@"Full Name-%i", i];
+        NSString *fullName = names[i];
         NSString *phone = [NSString stringWithFormat:@"333-444-555"];
         NSString *email = [NSString stringWithFormat:@"email_%i@test.com", i];
         
@@ -43,6 +45,7 @@
             [((SMAContact *)[[mockContact stub] andReturnValue:OCMOCK_VALUE(SMAContactTypePhone)]) type];
         }
         
+        [[[mockContact stub] andReturnValue:OCMOCK_VALUE(fullName)] valueForKey:@"fullName"];
         [[[mockContact stub] andReturnValue:OCMOCK_VALUE(fullName)] fullName];
         
         [self.mockContacts addObject:mockContact];
@@ -54,11 +57,12 @@
 {
     int max = MAX_CONTACT;
     self.mockSmartMoms = [NSMutableArray array];
+    NSArray *names = @[@"Rand", @"Raphael", @"Jess", @"Emmett", @"Martin", @"Jack Bauer", @"Mike", @"Madonna", @"Courtney", @"Jack", @"Arnol", @"Sif",@"John", @"Laurel", @"Bass", @"Brad", @"Jose"];
     
     for(int i = 0; i<max; i++) {
         id mockMom = [OCMockObject mockForClass:[SMAOtherMom class]];
         
-        NSString *name     = [NSString stringWithFormat:@"Mom's Name-%i", i];
+        NSString *name     = names[i];
         NSString *location = [NSString stringWithFormat:@"Chicago, IL"];
 
         
@@ -151,7 +155,6 @@
     XCTAssertEqual(self.controller.invitationArray.count, 0);
 }
 
-
 #pragma mark - UITableView (Follow SmartMoms)
 
 - (void)testTableViewNumberOfRowsInSectionForFollowSmartMoms
@@ -192,6 +195,21 @@
     [mock verify];
 }
 
+- (void)testSearchContacts
+{
+    [self activateSearchDisplayControllerWithText:@"John"];
+    [self.controller.searchDisplayController.searchBar becomeFirstResponder];
+
+    XCTAssertEqual(self.controller.filterArray.count, 1);
+}
+
+- (void)testSearchOtherMoms
+{
+   
+    [self activateSearchDisplayControllerWithText:@"Jack"];
+    XCTAssertEqual(self.controller.filterArray.count, 2);
+}
+
 
 #pragma mark - Reusable methods
 
@@ -203,7 +221,14 @@
     [[[segmentedControlMock stub] andReturnValue:OCMOCK_VALUE(selectedSegment)] selectedSegmentIndex];
     
     [self.controller changeViewDidChange:segmentedControlMock];
+}
 
+- (void)activateSearchDisplayControllerWithText:(NSString *)aText
+{
+    [self.controller.searchDisplayController setActive: YES animated: YES];
+    self.controller.searchDisplayController.searchBar.hidden = NO;
+    self.controller.searchDisplayController.searchBar.text = aText;
+    [self.controller.searchDisplayController.searchBar becomeFirstResponder];
 }
 
 - (void)testPerformanceExample {
