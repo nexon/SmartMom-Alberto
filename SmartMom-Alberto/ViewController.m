@@ -328,11 +328,8 @@ static NSString *SMAFollowCell  = @"SMAFollowCell";
         // Here we search all friends in facebook
         
         if([FBSession activeSession].isOpen) {
-            NSLog(@"%s: retreiving all friends", __func__);
-            
             [FBRequestConnection startWithGraphPath:@"/me/friends?fields=picture,name" completionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
                 if(!error) {
-                    NSLog(@"%s: %@", __func__, result);
                     for (id user in result[@"data"]) {
                         SMAOtherMom *mom = [[SMAOtherMom alloc] init];
                         mom.name = user[@"name"];
