@@ -179,6 +179,8 @@ static NSString *SMAFollowCell  = @"SMAFollowCell";
         }
         cell.textLabel.text = mom.name;
         cell.detailTextLabel.text = mom.location;
+        if(mom.image)
+            cell.imageView.image = mom.image;
         
         [self setUIContentFor:cell atIndexPath:indexPath withObject:mom];
     }
@@ -322,6 +324,30 @@ static NSString *SMAFollowCell  = @"SMAFollowCell";
         self.selectedSegment = SMASegmentInviteContacts;
     } else {
         self.selectedSegment = SMASegmentFollowMom;
+        
+        // Here we search all friends in facebook
+        
+        if([FBSession activeSession].isOpen) {
+            NSLog(@"%s: retreiving all friends", __func__);
+            
+            [FBRequestConnection startWithGraphPath:@"/me/friends?fields=picture,name" completionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
+                if(!error) {
+                    NSLog(@"%s: %@", __func__, result);
+                    for (id user in result[@"data"]) {
+                        SMAOtherMom *mom = [[SMAOtherMom alloc] init];
+                        mom.name = user[@"name"];
+                        mom.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:user[@"picture"][@"data"][@"url"]]]];
+                        [self.followMoms insertObject:mom atIndex:0];
+                        [self.tableView reloadData];
+                    }
+                } else {
+                    NSLog(@"%s: Error", __func__);
+                }
+            }];
+            
+            
+        }
+        
     }
     
     [self showSendInvitationButtonIfNeeded];
@@ -418,7 +444,7 @@ static NSString *SMAFollowCell  = @"SMAFollowCell";
     } else {
         // Open a session showing the user the login UI
         // You must ALWAYS ask for public_profile permissions when opening a session
-        [FBSession openActiveSessionWithReadPermissions:@[@"public_profile"]
+        [FBSession openActiveSessionWithReadPermissions:@[@"public_profile", @"user_friends"]
                                            allowLoginUI:YES
                                       completionHandler:
          ^(FBSession *session, FBSessionState state, NSError *error) {
